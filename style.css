@@ -190,7 +190,7 @@ body {
 /* Scroll-down button */
 .scroll-down-btn {
   position: fixed;
-  bottom: 30%;
+  bottom: 20%;
   left: 50%;
   transform: translate(-50%, 0); 
   color: white;
@@ -631,8 +631,9 @@ body {
   .galery-left-images {
     flex-direction: column;
   }
+  
   .scroll-down-btn {
-    right: 47%;
+    bottom: 35%;
   }
 }
 
