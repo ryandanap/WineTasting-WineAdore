@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wine Tasting - Wine Adore</title>
+    <link rel="icon" type="image/png" href="image/wineAdoreLogo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo">Wine Adore</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Wine List</a></li>
+          <li><a href="#contact-form">Reserve Now</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Wine List</a>
+      <a href="#contact-form">Reserve Now</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Wine & Dine With Us</h1>
+        <p>Wine tasting, tight bites, and even better conversation!</p>
+      </div>
+    </section>
+    <!-- Scroll Down Button -->
+    <a href="#about" class="scroll-down-btn" id="scrollDownBtn"> ↓ </a>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>Wine Tasting</h2>
+            <p>
+              Discover the art of wine tasting with Wine Adore, where every
+              glass is an invitation to explore flavors, aromas, and stories
+              from around the world. Our guided tastings are designed to help
+              you appreciate the character and uniqueness of each wine, whether
+              you’re a curious beginner or a seasoned enthusiast.
+            </p>
+            <p>
+              More than just a sip, wine tasting at Wine Adore is about
+              connection, connecting with culture, with people, and with the
+              passion behind every bottle.
+            </p>
+            <a class="btn-about" href="#contact-form">Reserve Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dekorasi PNG -->
+      <img
+        src="image/wineGlass1.webp"
+        alt="Wine Toast"
+        class="decor decor-left"
+      />
+      <img
+        src="image/wineGlass2.webp"
+        alt="Wine Glass"
+        class="decor decor-top-right"
+      />
+      <img
+        src="image/wineGlass3.png"
+        alt="Wine Glass Bottom"
+        class="decor decor-bottom-right"
+      />
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+      <div class="container">
+        <h2 class="section-title fade-in">Our Wine List</h2>
+        <div class="products-grid">
+          <!-- Card 1 -->
+          <!-- Card dengan gambar URL -->
+          <div
+            class="product-card fade-in"
+            data-title="Grilos Sparkling Brut NV"
+            data-desc="
+    <p>
+      A refined <strong>sparkling white wine</strong> from the Dão region of Portugal, crafted by <strong>Grilos</strong>. 
+      Aged to perfection, it delivers freshness, finesse, and a crisp elegant profile.
+    </p>
+    <br>
+    <strong>Region:</strong> Dao (D.O.C) | <strong>Winery:</strong> Grilos<br>
+    <strong>Grapes:</strong> Bical, Maria Gomes, Arinto<br>
+    <strong>Winemaking:</strong> Staging for 12 months in wine cellar and 1 more month after disgorgement.<br>
+    <strong>ABV:</strong> 13.5% | <strong>Serving Temp:</strong> 6-8 ºC<br>
+    <br>
+    <strong>Pairing:</strong>
+    <ul>
+      <li>Smoked Salmon Tartare</li>
+      <li>Japanese Tempura Shrimp</li>
+      <li>Goat Cheese and Walnut Crostini</li>
+    </ul>
+    <br>
+    <strong>Tasting Notes:</strong>
+    <ul>
+      <li>Crystalline with elegant bubbles, citrus colour</li>
+      <li>White fresh fruit jelly, citrus, hazelnut and biscuit aromas</li>
+      <li>Fruity, fresh, soft mousse, crispy and elegant persistence</li>
+    </ul>
+  "
+            data-image="Grilos Sparkling Brut NV"
+          >
+            <!-- product-image pakai background langsung -->
+            <div
+              class="product-image"
+              style="
+                background-image: url('imageWine/Grilos\ Sparkling\ Brut\ NV.png');
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+              "
+            ></div>
+
+            <h3>Château Rouge Reserve</h3>
+            <p>A bold and elegant red wine with notes of dark berries...</p>
+          </div>
+          <!-- Card 2 -->
+          <!-- Card dengan gambar URL -->
+          <div
+            class="product-card fade-in"
+            data-title="Cartuxa Anfora Branco 2018"
+            data-desc="
+    <p>
+      A distinctive and complex <strong>white wine</strong> from Cartuxa, showcasing traditional Portuguese varietals and unique amphora aging.  
+    </p>
+    <br>
+    <strong>Region:</strong> Alentejo, Evora (D.O.C) | <strong>Winery:</strong> Cartuxa<br>
+    <strong>Grapes:</strong> Arinto, Roupeiro, Fernao Pires, Trincadeira das Pratas & Malvasia Rei<br>
+    <strong>Aging:</strong> 29 days on skin fermentation inside anfora (amphora) clay pots<br>
+    <strong>ABV:</strong> 13.5% | <strong>Serving Temp:</strong> 10-12 °C<br>
+    <br>
+    <strong>Pairing:</strong>
+    <ul>
+      <li>Oysters</li>
+      <li>Clams</li>
+      <li>Sashimi</li>
+      <li>Sushi</li>
+      <li>Spicy Food</li>
+    </ul>
+    <br>
+    <strong>Tasting Notes:</strong>
+    <ul>
+      <li>Golden honey crisp color, clear and bright</li>
+      <li>Aromas of acacia, citrus, grapefruit, with smoky nuances</li>
+      <li>Flavors of citrus and tropical fruits with a long, persistent finish</li>
+    </ul>
+  "
+            data-image="Cartuxa_Anfora_Branco_2018"
+          >
+            <!-- product-image pakai background langsung -->
+            <div
+              class="product-image"
+              style="
+                background-image: url('imageWine/Cartuxa\ Anfora\ Branco\ 2018.png');
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+              "
+            ></div>
+
+            <h3>Château Rouge Reserve</h3>
+            <p>A bold and elegant red wine with notes of dark berries...</p>
+          </div>
+          <!-- Card 3 -->
+          <!-- Card dengan gambar URL -->
+          <div
+            class="product-card fade-in"
+            data-title="O Estrangeiro Branco 2023"
+            data-desc="
+    <p>
+      An expressive and distinctive <strong>white wine</strong> from Dao, crafted by Herdade do Rocim with traditional old vines and oak aging.  
+    </p>
+    <br>
+    <strong>Region:</strong> Dao | <strong>Winery:</strong> Herdade do Rocim<br>
+    <strong>Grapes:</strong> Old Vines - Traditional Grapes<br>
+    <strong>Aging:</strong> Manual harvest. 24 hours of cold skin maceration, fermentation in 500L French oak barrels for 19 days at controlled temperature, with daily bâtonnage. Aged in French oak barrels for 12 months.<br>
+    <strong>ABV:</strong> 13.5% | <strong>Serving Temp:</strong> 16-18 °C<br>
+    <br>
+    <strong>Pairing:</strong>
+    <ul>
+      <li>Spicy Crab</li>
+      <li>Grilled Lobster Tails</li>
+      <li>Seafood Pasta</li>
+    </ul>
+    <br>
+    <strong>Tasting Notes:</strong>
+    <ul>
+      <li>Golden colour, bright and clear</li>
+      <li>Fresh, smoky, spicy and vegetal aroma from skin contact</li>
+      <li>Tomato plant and grapefruit notes</li>
+      <li>Firm, dry, and textural palate with salinity</li>
+      <li>Long and mineral finish</li>
+    </ul>
+  "
+            data-image="O Estrangeiro Branco 2023"
+          >
+            <!-- product-image pakai background langsung -->
+            <div
+              class="product-image"
+              style="
+                background-image: url('imageWine/O_Estrangeiro_Branco_2023.png');
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+              "
+            ></div>
+
+            <h3>Château Rouge Reserve</h3>
+            <p>A bold and elegant red wine with notes of dark berries...</p>
+          </div>
+          <!-- Card 4 -->
+          <!-- Card dengan gambar URL -->
+          <div
+            class="product-card fade-in"
+            data-title="Quinta do Regueiro Alvarinho Reserva 2023"
+            data-desc="
+    <p>
+      A refined and structured <strong>white wine</strong> from Vinho Verde, crafted by Quinta do Regueiro using Alvarinho grapes, delivering freshness, minerality, and elegance.  
+    </p>
+    <br>
+    <strong>Region:</strong> Vinho Verde | <strong>Winery:</strong> Quinta do Regueiro<br>
+    <strong>Grapes:</strong> Alvarinho<br>
+    <strong>Aging:</strong> After fermentation, wine is staged for one year in bottle prior to release<br>
+    <strong>ABV:</strong> 13.0% | <strong>Serving Temp:</strong> 8-10 °C<br>
+    <br>
+    <strong>Pairing:</strong>
+    <ul>
+      <li>Spicy seafood dishes</li>
+      <li>Poultry</li>
+      <li>Grilled fish</li>
+    </ul>
+    <br>
+    <strong>Tasting Notes:</strong>
+    <ul>
+      <li>Citrus coloured wine</li>
+      <li>Aromas of citrus fruit and apple in perfect balance</li>
+      <li>Full-bodied mouthfeel with great volume</li>
+      <li>Long, persistent buttery mineral finish</li>
+    </ul>
+  "
+            data-image="Quinta do Regueiro Alvarinho Reserva 2023"
+          >
+            <!-- product-image pakai background langsung -->
+            <div
+              class="product-image"
+              style="
+                background-image: url('imageWine/Quinta_do_Regueiro_Alvarinho_Reserva_2023.png');
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+              "
+            ></div>
+
+            <h3>Château Rouge Reserve</h3>
+            <p>A bold and elegant red wine with notes of dark berries...</p>
+          </div>
+          <!-- Card 5 -->
+          <!-- Card dengan gambar URL -->
+          <div
+            class="product-card fade-in"
+            data-title="Crazy Javali White 2021"
+            data-desc="
+    <p>
+      A fresh and unconventional <strong>white wine</strong> from the Douro, crafted by Quinta do Javali with a distinctive mineral character and youthful energy.  
+    </p>
+    <br>
+    <strong>Region:</strong> Douro (D.O.C) | <strong>Winery:</strong> Quinta do Javali<br>
+    <strong>Grapes:</strong> Arinto & Viosinho<br>
+    <strong>Aging:</strong> Aged 5 months in stainless steel<br>
+    <strong>ABV:</strong> 10% | <strong>Serving Temp:</strong> 8-10 °C<br>
+    <br>
+    <strong>Pairing:</strong>
+    <ul>
+      <li>Appetizer</li>
+      <li>Fish Cakes</li>
+      <li>Chicken Rice</li>
+    </ul>
+    <br>
+    <strong>Tasting Notes:</strong>
+    <ul>
+      <li>Lemon yellow color</li>
+      <li>Enigmatic nose from skin contact in concrete vat</li>
+      <li>Dominant minerality with almost metallic notes, benefits from aeration</li>
+      <li>Light, youthful, and refreshing palate</li>
+      <li>Mineral and uncompromised finish (only 10% ABV)</li>
+    </ul>
+  "
+            data-image="Crazy Javali White 2021"
+          >
+            <!-- product-image pakai background langsung -->
+            <div
+              class="product-image"
+              style="
+                background-image: url('imageWine/Crazy_Javali_White_2021.png');
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+              "
+            ></div>
+
+            <h3>Château Rouge Reserve</h3>
+            <p>A bold and elegant red wine with notes of dark berries...</p>
+          </div>
+          <!-- Card 6 -->
+          <!-- Card dengan gambar URL -->
+          <div
+            class="product-card fade-in"
+            data-title="Grilos Red 2021"
+            data-desc="
+    <p>
+      A rich and balanced <strong>red wine</strong> from the Dao region, crafted by Quinta dos Grilos with traditional Portuguese grapes, showcasing depth and elegance.  
+    </p>
+    <br>
+    <strong>Region:</strong> Dao (D.O.C) | <strong>Winery:</strong> Quinta dos Grilos<br>
+    <strong>Grapes:</strong> Touriga Nacional, Tinta Roriz & Jaen<br>
+    <strong>Aging:</strong> 6 months in French oak barrels<br>
+    <strong>ABV:</strong> 13% | <strong>Serving Temp:</strong> 14-16 °C<br>
+    <br>
+    <strong>Pairing:</strong>
+    <ul>
+      <li>Chorizo and White Bean Stew</li>
+      <li>Thai Basil Beef</li>
+      <li>Roasted Carrots with Honey and Thyme</li>
+    </ul>
+    <br>
+    <strong>Tasting Notes:</strong>
+    <ul>
+      <li>Intense ruby color</li>
+      <li>Aromas of red berries, roasted nuts, wildflowers, and balsamic notes</li>
+      <li>Fruity, soft, and well-balanced flavor with good persistency</li>
+    </ul>
+  "
+            data-image="Grilos Red 2021"
+          >
+            <!-- product-image pakai background langsung -->
+            <div
+              class="product-image"
+              style="
+                background-image: url('imageWine/Grilos_Red_2021.png');
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+              "
+            ></div>
+
+            <h3>Château Rouge Reserve</h3>
+            <p>A bold and elegant red wine with notes of dark berries...</p>
+          </div>
+          <!-- Card 7 -->
+          <!-- Card dengan gambar URL -->
+          <div
+            class="product-card fade-in"
+            data-title="Invulgar Tinto 2020"
+            data-desc="
+    <p>
+      A complex and expressive <strong>red wine</strong> from the Dao region, crafted by UDACA with native Portuguese grapes and aged in fine Allier oak for remarkable depth and elegance.  
+    </p>
+    <br>
+    <strong>Region:</strong> Dao (D.O.C) | <strong>Winery:</strong> UDACA<br>
+    <strong>Grapes:</strong> Touriga Nacional & Alfrocheiro<br>
+    <strong>Aging:</strong> 12 months in Allier Fino Oak Barrels<br>
+    <strong>ABV:</strong> 13.5% | <strong>Decant:</strong> 0.5 hrs | <strong>Serving Temp:</strong> 16-18 °C<br>
+    <br>
+    <strong>Pairing:</strong>
+    <ul>
+      <li>Deep Fried Crispy Chicken</li>
+      <li>Cantonese Char Siu</li>
+    </ul>
+    <br>
+    <strong>Tasting Notes:</strong>
+    <ul>
+      <li>Deep red color with garnet highlights</li>
+      <li>Complex aromas of black plum, blackberry, violet, and bergamot</li>
+      <li>Subtle vanilla and balsamic nuances</li>
+      <li>Velvety, well-structured palate with firm tannins</li>
+      <li>Elegant finish reflecting Dao’s terroir</li>
+    </ul>
+  "
+            data-image="Invulgar Tinto 2020"
+          >
+            <!-- product-image pakai background langsung -->
+            <div
+              class="product-image"
+              style="
+                background-image: url('imageWine/Invulgar_Tinto\ _2020.webp');
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+              "
+            ></div>
+
+            <h3>Château Rouge Reserve</h3>
+            <p>A bold and elegant red wine with notes of dark berries...</p>
+          </div>
+          <!-- Card 8 -->
+          <!-- Card dengan gambar URL -->
+          <div
+            class="product-card fade-in"
+            data-title="Casa de Santar Reserva Tinto 2016"
+            data-desc="
+    <p>
+      A rich and elegant <strong>red wine</strong> from the Dao region, crafted by Casa de Santar with a blend of traditional Portuguese varietals and aged in French oak for added depth and complexity.  
+    </p>
+    <br>
+    <strong>Region:</strong> Dao (D.O.C) | <strong>Winery:</strong> Casa de Santar<br>
+    <strong>Grapes:</strong> 50% Aragonez, 30% Touriga Nacional, 20% Alfrocheiro<br>
+    <strong>Aging:</strong> 9 months in French oak barrels<br>
+    <strong>ABV:</strong> 13.5% | <strong>Decant:</strong> 0.5 - 1 hr | <strong>Serving Temp:</strong> 16-18 °C<br>
+    <br>
+    <strong>Pairing:</strong>
+    <ul>
+      <li>Grilled Red Meats</li>
+      <li>Pasta</li>
+      <li>Strong Cheese</li>
+    </ul>
+    <br>
+    <strong>Tasting Notes:</strong>
+    <ul>
+      <li>Deep ruby color with brownish undertones</li>
+      <li>Aromas of red fruit jam, spices, and toasted bread</li>
+      <li>Complex and well-structured tannins</li>
+      <li>Elegant, harmonious, and soft finish</li>
+    </ul>
+  "
+            data-image="Casa de Santar Reserva Tinto 2016"
+          >
+            <!-- product-image pakai background langsung -->
+            <div
+              class="product-image"
+              style="
+                background-image: url('imageWine/Casa_de_Santar_Reserva_Tinto_2016.png');
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+              "
+            ></div>
+
+            <h3>Château Rouge Reserve</h3>
+            <p>A bold and elegant red wine with notes of dark berries...</p>
+          </div>
+          <!-- Card 9 -->
+          <!-- Card dengan gambar URL -->
+          <div
+            class="product-card fade-in"
+            data-title="Quinta do Javali PGE Branco 2020"
+            data-desc="
+    <p>
+      A complex and elegant <strong>white wine</strong> from the Douro, crafted by Quinta do Javali and aged with bâtonnage in a unique spherical concrete vat made from vineyard soil, showcasing depth and minerality.  
+    </p>
+    <br>
+    <strong>Region:</strong> Douro (D.O.C) | <strong>Winery:</strong> Quinta do Javali<br>
+    <strong>Grapes:</strong> Viosinho & Arinto<br>
+    <strong>Aging:</strong> 12 months with bâtonnage in a spherical concrete vat made from vineyard soil<br>
+    <strong>ABV:</strong> 13.5% | <strong>Serving Temp:</strong> 12-14 °C | <strong>Decant:</strong> 0.5 hrs<br>
+    <br>
+    <strong>Pairing:</strong>
+    <ul>
+      <li>BBQ Meat</li>
+      <li>Scallops</li>
+      <li>Spicy Crab</li>
+      <li>Seafood Curry</li>
+    </ul>
+    <br>
+    <strong>Tasting Notes:</strong>
+    <ul>
+      <li>Light yellow color with greenish undertones</li>
+      <li>Fruity aromas dominated by citrus, evolving to fennel and aniseed</li>
+      <li>Hints of brioche, butter, and toasted barrel</li>
+      <li>Rich structure and creamy texture from bâtonnage</li>
+      <li>Elegant and age-worthy finish</li>
+    </ul>
+  "
+            data-image="Quinta do Javali PGE Branco 2020"
+          >
+            <!-- product-image pakai background langsung -->
+            <div
+              class="product-image"
+              style="
+                background-image: url('imageWine/Quinta_do_Javali_PGE_Branco_2020-removebg-preview.png');
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+              "
+            ></div>
+
+            <h3>Château Rouge Reserve</h3>
+            <p>A bold and elegant red wine with notes of dark berries...</p>
+          </div>
+          <!-- Card 10 -->
+          <!-- Card dengan gambar URL -->
+          <div
+            class="product-card fade-in"
+            data-title="Herdade do Rocim Red 2021"
+            data-desc="
+    <p>
+      A full-bodied and expressive <strong>red wine</strong> from Alentejo, crafted by Herdade do Rocim with native Portuguese varietals and aged in French oak for a refined structure and balance.  
+    </p>
+    <br>
+    <strong>Region:</strong> Alentejo | <strong>Winery:</strong> Herdade do Rocim<br>
+    <strong>Grapes:</strong> Touriga Nacional, Alicante Bouschet & Aragonez<br>
+    <strong>Aging:</strong> 6 months in French Oak<br>
+    <strong>ABV:</strong> 14.0% | <strong>Decant:</strong> 30 mins | <strong>Serving Temp:</strong> 16-18 °C<br>
+    <br>
+    <strong>Pairing:</strong>
+    <ul>
+      <li>Piri Piri Chicken</li>
+      <li>Lasagna</li>
+      <li>Lamb Kebab</li>
+    </ul>
+    <br>
+    <strong>Tasting Notes:</strong>
+    <ul>
+      <li>Deep and concentrated ruby colour</li>
+      <li>Aromas of black fruit and mineral notes with subtle spice from barrel aging</li>
+      <li>Firm tannins and balanced acidity</li>
+      <li>Structured and elegant finish</li>
+    </ul>
+  "
+            data-image="Herdade do Rocim Red 2021"
+          >
+            <!-- product-image pakai background langsung -->
+            <div
+              class="product-image"
+              style="
+                background-image: url('imageWine/Herdade_do_Rocim_Red_2021.png');
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px;
+              "
+            ></div>
+
+            <h3>Château Rouge Reserve</h3>
+            <p>A bold and elegant red wine with notes of dark berries...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modal Popup -->
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modalImage" src="" alt="Product Image" />
+        <h2 id="modalTitle"></h2>
+        <div id="modalDesc"></div>
+      </div>
+    </div>
+
+    <!-- Section Galery -->
+    <section id="galery" class="galery">
+      <div class="container">
+        <div class="galery-grid">
+          <!-- Kolom kiri -->
+          <div class="galery-left">
+            <h2 class="fade-in">Gallery</h2>
+            <div class="galery-left-images fade-in">
+              <img
+                src="galery/tasting1.webp"
+                alt="Wine Left 1"
+              />
+              <img
+                src="galery/tasting2.webp"
+                alt="Wine Left 2"
+              />
+            </div>
+          </div>
+
+          <!-- Kolom kanan -->
+          <div class="galery-right">
+            <div class="galery-img img1 fade-in">
+              <img
+                src="galery/tasting3.webp"
+                alt="Wine Right 1"
+              />
+            </div>
+            <div class="galery-img img2 fade-in">
+              <img
+                src="galery/tasting4.webp"
+                alt="Wine Right 2"
+              />
+            </div>
+            <div class="galery-img img3 fade-in">
+              <img
+                src="galery/tasting5.webp"
+                alt="Wine Right 3"
+              />
+            </div>
+            <div class="galery-img img4 fade-in">
+              <img
+                src="galery/tasting6.webp"
+                alt="Wine Right 4"
+              />
+            </div>
+            <div class="galery-img img4 fade-in">
+              <img
+                src="galery/tasting7.webp"
+                alt="Wine Right 4"
+              />
+            </div>
+            <div class="galery-img img4 fade-in">
+              <img
+                src="galery/tasting8.webp"
+                alt="Wine Right 4"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Image Viewer -->
+    <div id="image-viewer" class="image-viewer">
+      <span class="image-viewer-close">&times;</span>
+      <img class="image-viewer-content" id="image-viewer-img" />
+    </div>
+
+    <!-- Reserve Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-info slide-in-right">
+            <br />
+            <br />
+            <br />
+            <h3>Visit Our Tasting Room</h3>
+            <!-- Embed Google Maps -->
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.0016818453276!2d103.7847835750268!3d1.276611762134935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1b21b69bb20b%3A0x4f2de1d90aef1e4c!2sInterlocal%20Center!5e0!3m2!1sen!2ssg!4v1694598529341!5m2!1sen!2ssg"
+                width="100%"
+                height="250"
+                style="border: 0; border-radius: 10px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+            <br />
+            <p>
+              <strong>Wine Adore Cellar</strong> – Interlocal Center,<br />
+              100G Pasir Panjang Road, #03-01,<br />
+              Singapore 118523
+            </p>
+            <br />
+            <p>
+              <strong>Phone:</strong> +65 835 81690-WINE<br />
+              <br />
+              <strong>Email:</strong> hello@wineadore.com
+            </p>
+            <br />
+            <p>
+              <strong>Hours:</strong><br />
+              Fridays: 4:30 PM | 7:00 PM<br />
+              Saturdays & Sundays: 2:00 PM | 4:30 PM | 7:00 PM
+            </p>
+            <br />
+          </div>
+
+          <!-- form reservation -->
+          <div class="contact-form slide-in-left">
+            <div id="contact-form"></div>
+            <br />
+            <h2>Reservation</h2>
+            <form id="contactForm">
+              <div>
+                <!-- Name -->
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <!-- Pax -->
+                <div class="form-group">
+                  <label for="pax">Pax</label>
+                  <input
+                    type="number"
+                    id="pax"
+                    name="pax"
+                    placeholder="Number of Guests"
+                    min="1"
+                    required
+                  />
+                </div>
+                <!-- Date -->
+                <div class="form-group">
+                  <label for="date">Date</label>
+                  <select id="date" name="date" required></select>
+                </div>
+                <!-- Time -->
+                <div class="form-group">
+                  <label for="time">Time</label>
+                  <select id="time" name="time" required></select>
+                </div>
+                <!-- WhatsApp -->
+                <div class="form-group">
+                  <label for="whatsapp">WhatsApp Number</label>
+                  <input
+                    type="tel"
+                    id="whatsapp"
+                    name="whatsapp"
+                    placeholder="+62 812-xxxx-xxxx"
+                    required
+                  />
+                </div>
+                <!-- Keterangan -->
+                <div class="form-group">
+                  <label for="notes">Notes</label>
+                  <textarea
+                    id="notes"
+                    name="notes"
+                    rows="4"
+                    placeholder="Guest name information and request..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Reserve</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Wine Adore. All rights reserved. | Drink responsibly.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
