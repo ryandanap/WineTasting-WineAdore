@@ -189,15 +189,15 @@ body {
 
 /* Scroll-down button */
 .scroll-down-btn {
-  position: absolute;
-  bottom: 30%; /* ✅ jarak dari bawah */
+  position: fixed;          /* ✅ bukan absolute */
+  bottom: 10%;             /* jarak dari bawah layar */
   left: 50%;
   transform: translateX(-50%);
   color: white;
   font-size: 2.3rem;
   text-decoration: none;
   animation: bounce 1.5s infinite;
-  z-index: 3; /* ✅ agar selalu di atas background */
+  z-index: 999;             /* pastikan di atas hero */
 }
 
 .scroll-down-btn:hover {
