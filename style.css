@@ -176,16 +176,42 @@ body {
   z-index: 1;
 }
 
+.hero {
+  position: relative; /* pastikan ini ada */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
 /* Scroll-down button */
 .scroll-down-btn {
   position: absolute;
+  bottom: 30%; /* ✅ jarak dari bawah */
   left: 50%;
   transform: translateX(-50%);
   color: white;
   font-size: 2.3rem;
   text-decoration: none;
   animation: bounce 1.5s infinite;
+  z-index: 3; /* ✅ agar selalu di atas background */
 }
+
+.scroll-down-btn:hover {
+  color: #ffa6b9;
+}
+
+.scroll-down-btn.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  display: none;
+}
+
+
 
 @keyframes bounce {
   0%,
