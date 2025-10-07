@@ -80,7 +80,7 @@ aboutTl.fromTo(
 
 // Sembunyikan tombol saat user scroll ke bawah
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
+  if (window.scrollY > 50) {
     scrollDownBtn.classList.add("hidden");
   } else {
     scrollDownBtn.classList.remove("hidden");

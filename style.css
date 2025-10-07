@@ -131,19 +131,71 @@ body {
 
 /* Hero Section */
 .hero {
+  position: relative;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.481), rgba(0, 0, 0, 0.196)),
-    url("image/backgroundHero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  position: relative;
+  overflow: hidden;
+}
+
+/* Latar belakang "diam" */
+.hero-bg-fixed {
+  position: fixed; /* triknya di sini! */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  overflow: hidden;
+}
+
+.hero-bg-fixed img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Overlay gradasi seperti sebelumnya */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.481), rgba(0, 0, 0, 0.196));
   z-index: -2;
+}
+
+/* Konten di atas */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scroll-down button */
+.scroll-down-btn {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2.3rem;
+  text-decoration: none;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px);
+  }
 }
 
 .hero-content {
@@ -165,23 +217,6 @@ body {
   margin-bottom: 2rem;
   opacity: 0;
   transform: translateY(30px);
-}
-
-/* Scroll Down Button */
-.scroll-down-btn {
-  position: fixed;
-  bottom: 20%;
-  right: 49%;
-  font-size: 3rem;
-  text-decoration: none;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  z-index: 10;
-  opacity: 0;
-  animation: bounce 1.5s infinite;
 }
 
 .scroll-down-btn:hover {
@@ -424,7 +459,6 @@ body {
   margin-bottom: 0.4rem;
 }
 
-
 .close {
   float: right;
   font-size: 28px;
@@ -457,6 +491,7 @@ body {
 /* galery section */
 .galery {
   padding: 8rem 2.5rem;
+  background: linear-gradient(to bottom,#ffffff);
 }
 
 .galery-grid {
