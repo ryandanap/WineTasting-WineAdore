@@ -16,6 +16,19 @@ gsap
     "-=0.3"
   );
 
+  gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".hero-content", {
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    end: "bottom top",
+    pin: true,      // ✅ ini efek "fixed" aman di semua browser
+    pinSpacing: false,
+  },
+});
+
+
 const scrollDownBtn = document.getElementById("scrollDownBtn");
 
 // Timeline untuk animasi About
