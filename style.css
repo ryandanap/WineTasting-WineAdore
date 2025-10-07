@@ -189,15 +189,17 @@ body {
 
 /* Scroll-down button */
 .scroll-down-btn {
-  position: fixed;          /* ✅ bukan absolute */
-  bottom: 10%;             /* jarak dari bawah layar */
+  position: fixed;
+  bottom: 10%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0); /* Pastikan tetap pakai -50% */
   color: white;
   font-size: 2.3rem;
   text-decoration: none;
   animation: bounce 1.5s infinite;
-  z-index: 999;             /* pastikan di atas hero */
+  z-index: 999;
+  width: 100vw;           /* ✅ Safari fix: tombol di tengah viewport */
+  text-align: center;     /* ✅ pastikan tetap di tengah */
 }
 
 .scroll-down-btn:hover {
