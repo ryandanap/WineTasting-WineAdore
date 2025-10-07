@@ -263,7 +263,7 @@ body {
 /* About Section */
 .about {
   position: relative;
-  padding: 8rem 2rem;
+  padding: 9.5rem 2rem;
   background: linear-gradient(to bottom, #1a1a1a, #dfdfdf);
   overflow: hidden;
 }
