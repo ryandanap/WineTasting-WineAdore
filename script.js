@@ -11,11 +11,10 @@ gsap
     "-=0.5"
   )
   .fromTo(
-   ".scroll-down-btn",
-  { opacity: 0, y: 30 },
-  { duration: 1.8, opacity: 1, y: 0, ease: "power2.out" }
+    ".scroll-down-btn",
+    { opacity: 0, y: 30 },
+    { duration: 1.8, opacity: 1, y: 0, ease: "power2.out" }
   );
-
 
 // hero bacground
 gsap.registerPlugin(ScrollTrigger);
@@ -237,36 +236,50 @@ const imageViewer = document.getElementById("image-viewer");
 const imageViewerImg = document.getElementById("image-viewer-img");
 const imageViewerClose = document.querySelector(".image-viewer-close");
 
+let galleryScrollY = 0; // simpan posisi scroll
+
 // Event untuk semua gambar di galeri
 document
   .querySelectorAll(".galery-img img, .galery-left-images img")
   .forEach((img) => {
     img.addEventListener("click", () => {
+      // Tampilkan viewer
       imageViewer.style.display = "flex";
       imageViewerImg.src = img.src;
 
-      // nonaktifkan scroll halaman utama
-      document.documentElement.style.overflow = "hidden";
-      document.body.style.overflow = "hidden";
+      // Simpan posisi scroll & kunci halaman (seperti modal box)
+      galleryScrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${galleryScrollY}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
+      document.body.style.width = "100%";
+      document.body.style.overflow = "hidden"; // cegah bounce-scroll iOS
     });
   });
 
-// Tutup viewer saat klik tombol close
-imageViewerClose.onclick = function () {
+// Tutup viewer
+function closeViewer() {
   imageViewer.style.display = "none";
-  // nonaktifkan scroll halaman utama
-  document.documentElement.style.overflow = "auto";
-  document.body.style.overflow = "auto";
-};
 
-// Tutup viewer saat klik di luar gambar
-imageViewer.onclick = function (e) {
-  if (e.target === imageViewer) {
-    imageViewer.style.display = "none";
-  }
-  // nonaktifkan scroll halaman utama
-  document.documentElement.style.overflow = "auto";
-  document.body.style.overflow = "auto";
+  // Hapus fixed tanpa memicu efek scroll
+  const top = document.body.style.top;
+  document.body.style.position = "";
+  document.body.style.top = "";
+  document.body.style.width = "";
+  // Langsung set scroll posisi sebelumnya TANPA efek animasi
+  window.scrollTo({
+    top: parseInt(top || "0") * -1,
+    behavior: "instant", // tidak smooth, langsung
+  });
+}
+
+// Tombol close
+imageViewerClose.onclick = closeViewer;
+
+// Klik luar gambar
+imageViewer.onclick = (e) => {
+  if (e.target === imageViewer) closeViewer();
 };
 
 // atur date dan time

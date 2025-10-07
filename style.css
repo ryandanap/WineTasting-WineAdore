@@ -192,18 +192,15 @@ body {
   position: fixed;
   bottom: 23%;
   left: 50%;
-  transform: translate(-50%, 0); 
+  transform: translate(-50%, 0);
   color: white;
   font-size: 2.3rem;
   text-decoration: none;
   animation: bounce 1.5s infinite;
   z-index: 999;
-  width: 100vw;           
-  text-align: center;   
-}
-
-.scroll-down-btn:hover {
-  color: #ffa6b9;
+  width: 100vw;
+  text-align: center;
+  width: fit-content;
 }
 
 .scroll-down-btn.hidden {
@@ -212,8 +209,6 @@ body {
   transform: translateY(20px);
   display: none;
 }
-
-
 
 @keyframes bounce {
   0%,
@@ -510,7 +505,7 @@ body {
 /* galery section */
 .galery {
   padding: 8rem 2.5rem;
-  background: linear-gradient(to bottom,#ffffff);
+  background: linear-gradient(to bottom, #ffffff);
 }
 
 .galery-grid {
@@ -585,6 +580,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  overscroll-behavior: contain;
 }
 
 /* Gambar di dalam viewer */
