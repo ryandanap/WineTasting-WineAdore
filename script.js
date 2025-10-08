@@ -193,7 +193,7 @@ ScrollTrigger.matchMedia({
       ScrollTrigger.create({
         trigger: card,
         start: "top 70%",
-        end: "bottom 60%",
+        end: "bottom 50%",
         onEnter: () => tl.play(),
         onLeave: () => tl.reverse(),
         onEnterBack: () => tl.play(),
