@@ -164,16 +164,86 @@ gsap.utils.toArray(".slide-in-right").forEach((element) => {
   );
 });
 
-// Product card hover animations
-gsap.utils.toArray(".product-card").forEach((card) => {
-  card.addEventListener("mouseenter", () => {
-    gsap.to(card, { duration: 0.3, scale: 1.02, ease: "power2.out" });
-  });
 
-  card.addEventListener("mouseleave", () => {
-    gsap.to(card, { duration: 0.3, scale: 1, ease: "power2.out" });
-  });
+// Efek untuk MOBILE (pakai ScrollTrigger)
+ScrollTrigger.matchMedia({
+  "(max-width: 768px)": function () {
+    gsap.utils.toArray(".product-card").forEach((card) => {
+      const productImage = card.querySelector(".product-image");
+      const overlay = card.querySelector(".product-overlay");
+
+      const tl = gsap.timeline({ paused: true });
+
+      tl.to(productImage, {
+        y: -10,
+        boxShadow: "0 8px 5px rgba(0, 0, 0, 0.4)",
+        duration: 0.4,
+        ease: "power2.out",
+      }).to(
+        overlay,
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: "power2.out",
+        },
+        "-=0.2"
+      );
+
+      ScrollTrigger.create({
+        trigger: card,
+        start: "top 70%",
+        end: "bottom 60%",
+        onEnter: () => tl.play(),
+        onLeave: () => tl.reverse(),
+        onEnterBack: () => tl.play(),
+        onLeaveBack: () => tl.reverse(),
+      });
+    });
+  },
+
+  // Efek untuk DESKTOP (pakai hover)
+  "(min-width: 769px)": function () {
+    gsap.utils.toArray(".product-card").forEach((card) => {
+      const productImage = card.querySelector(".product-image");
+      const overlay = card.querySelector(".product-overlay");
+
+      // Saat cursor masuk
+      card.addEventListener("mouseenter", () => {
+        gsap.to(productImage, {
+          y: -10,
+          boxShadow: "0 8px 5px rgba(0, 0, 0, 0.4)",
+          duration: 0.4,
+          ease: "power2.out",
+        });
+        gsap.to(overlay, {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+      });
+
+      // Saat cursor keluar
+      card.addEventListener("mouseleave", () => {
+        gsap.to(productImage, {
+          y: 0,
+          boxShadow: "0 10px 25px rgba(0, 0, 0, 0)",
+          duration: 0.4,
+          ease: "power2.inOut",
+        });
+        gsap.to(overlay, {
+          opacity: 0,
+          y: 30,
+          duration: 0.5,
+          ease: "power2.inOut",
+        });
+      });
+    });
+  },
 });
+
+
 
 /// Mobile menu functionality
 const hamburger = document.getElementById("hamburger");
